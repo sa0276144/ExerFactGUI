@@ -6,12 +6,15 @@ from tkinter import *
 
 def calculer():
     text1 = entry1.get()
-    text2 = entry2.get()
-    if (text1.strip() != "" and text2.strip() != "" and text3.strip() != ""):
-        sv.set()
+    if text1.isnumeric():
+        fact = factorial(int(text1))
+        entry2.insert(END, str(fact))
 
 def factorial(n):
-    return n * factorial(n-1)
+    if n <= 1:
+        return 1
+    else:
+        return n * factorial(n-1)
 
 def effacer():
     entry1.delete(0, END)
@@ -32,8 +35,7 @@ entry1 = Entry(window, width=20)
 entry2 = Entry(window, width=20)
 
 button1 = Button(window, text="Effacer le contenu", command=effacer)
-button2 = Button(window, text="Calculer la factorielle", command=factorial)
-button3 = Button(window, text="Quitter", command=window.quit)
+button2 = Button(window, text="Calculer la factorielle", command=calculer)
 
 label1.grid(row = 0, column = 0, sticky = E, padx = 15, pady = 15)
 label2.grid(row = 1, column = 0, sticky = E, padx = 15, pady = 15)
