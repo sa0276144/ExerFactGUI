@@ -4,6 +4,8 @@ from tkinter import *
 #
 # This is comment
 
+# Deuxieme commentaire
+
 def calculer():
     text1 = entry1.get()
     if text1.isnumeric():
@@ -28,8 +30,6 @@ canvasImg = Canvas(window, width=120, height=120, bg="ivory")
 
 label1 = Label(window, text="Entrez la valeur de n :")
 label2 = Label(window, text="La factorielle de N est :")
-sv = StringVar()
-label4 = Label(window, textvariable=sv)
 
 entry1 = Entry(window, width=20)
 entry2 = Entry(window, width=20)
