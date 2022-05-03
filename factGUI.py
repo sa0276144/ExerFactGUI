@@ -7,7 +7,10 @@ def calculer():
         sv.set()
 
 def factorial(n):
-    return n * factorial(n-1)
+    if n <= 1:
+        return 1
+    else:
+        return n * factorial(n-1) 
 
 def effacer():
     entry1.delete(0, END)
@@ -39,4 +42,6 @@ entry1.grid(row = 0, column = 1, sticky = E, padx = 15, pady = 15)
 entry2.grid(row = 1, column = 1, sticky = E, padx = 15)
 button2.grid(row = 4, column = 1, sticky = E, pady = 15)
 
-window.mainloop()
+#window.mainloop()
+
+print(factorial(5))
