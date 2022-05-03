@@ -1,13 +1,17 @@
 from tkinter import *
 
+#this is a comment
+
 def calculer():
     text1 = entry1.get()
     text2 = entry2.get()
     if (text1.strip() != "" and text2.strip() != "" and text3.strip() != ""):
         sv.set()
-
 def factorial(n):
-    return n * factorial(n-1)
+    if n <= 1:
+        return 1
+    else:
+        return n * factorial(n-1) 
 
 def effacer():
     entry1.delete(0, END)
@@ -40,3 +44,4 @@ entry2.grid(row = 1, column = 1, sticky = E, padx = 15)
 button2.grid(row = 4, column = 1, sticky = E, pady = 15)
 
 window.mainloop()
+
